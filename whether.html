@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="w.css">
+</head>
+<body>
+    <div class="wrapper">
+        <h1>WEATHER APP</h1>
+      <div class="tab-container">
+       <p class="tab" data-userweather>Your Whether</p>
+        <p class="tab" data-searchweather> Search Whether</p>
+    </div>
+    <div class="weather-container">
+      <div class="sub-container grant-location-container">
+         <img src="./image/location.png" width="80px" height="80px" loading="lazy"> 
+         <p>grant Location Acsess</p>
+         <p>Allow Access to get whether information</p>
+         <button class="btn" type="submit" data-grantAccess>Grant Access</button>
+       </div>
+     <form class="form-container" data-searchForm>
+        <input placeholder="search for city" data-searchInput>
+        <button class="btn">
+            <img src="./image/search.png" alt="" width="20px" height="20px" loading="lazy">
+        </button>
+     </form>
+    <!-- loading screen  -->
+      <div class=" sub-container loading-container">
+         <img src="./image/loading.gif" alt="" width="150px" height="150px">
+         <p>Loading</p>
+       </div>
+    <!-- show weather infor -->
+     <div class=" sub-container user-info-container">
+         <div class="name">
+            <p data-cityName></p>
+            <img src="" alt="" data-countryicon>
+         </div>
+         <p data-whetherDesc></p>
+         <img data-weatherIcon>
+         <p data-temp></p>
+         <div class="parameter-container">
+            <!-- card1 -->
+            <div class="parameter">
+                <img src="./image/wind.png">
+                <p>WindSpeed</p>
+                <p data-windspeed></p>
+            </div>
+            <!-- card2 -->
+            <div class="parameter">
+                <img src="./image/humidity.png">
+                <p>Humidity</p>
+                <p data-humidity></p>
+            </div>
+            <div class="parameter">
+                <img src="./image/cloud.png">
+                <p>cloud</p>
+                <p data-cloudiness></p>
+            </div>
+        </div>
+    </div>
+    <div class="errorContainer sub-container">
+        <img src="./image/not-found.png" data-errorImg />
+        <p data-errorText></p>
+        <button class="btn" data-errorButton>Retry Now</button>
+      </div>
+</div>
+    <script src="w.js"></script>
+</body>
+</html>
